@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM Methodology Example</title>
+    <link rel="stylesheet" href="bem-methodology.css">
+</head>
+<body>
+    <div class="layout">
+        <header class="header">
+            <h1 class="header__title">CSS BEM Methodology Demo</h1>
+            <nav class="header__navigation">
+                <a href="#" class="header__nav-link">Home</a>
+                <a href="#" class="header__nav-link">About</a>
+                <a href="#" class="header__nav-link">Contact</a>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="card-section">
+                <div class="card">
+                    <div class="card__header">
+                        <h2 class="card__title">BEM Methodology</h2>
+                    </div>
+                    <div class="card__body">
+                        <p class="card__text">This demonstrates the Block Element Modifier methodology with clear naming conventions.</p>
+                        <button class="button button--primary">Primary Button</button>
+                        <button class="button button--secondary">Secondary Button</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h2 class="card__title">Block Structure</h2>
+                    </div>
+                    <div class="card__body">
+                        <p class="card__text">Each component is a block, with elements inside and modifiers for variations.</p>
+                        <div class="button-group">
+                            <button class="button button--primary button-group__item">Button 1</button>
+                            <button class="button button--secondary button-group__item">Button 2</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid-section">
+                <div class="grid-section__container">
+                    <div class="grid-section__item">BEM Block</div>
+                    <div class="grid-section__item">Clear Structure</div>
+                    <div class="grid-section__item">Scalable</div>
+                    <div class="grid-section__item">Maintainable</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">&copy; 2024 BEM Methodology Demo</p>
+        </footer>
+    </div>
+</body>
+</html>
