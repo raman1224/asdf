@@ -1,0 +1,224 @@
+/* ===========================================
+   BEM METHODOLOGY APPROACH
+   (Block Element Modifier)
+   =========================================== */
+
+/* BEM follows the pattern: .block__element--modifier */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Layout Block */
+.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Block */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.header__navigation {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.header__nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.header__nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content Block */
+.main {
+    padding: 2rem 0;
+}
+
+/* Card Section Block */
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Card Block */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card__header {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    color: #495057;
+    font-weight: 600;
+}
+
+.card__body {
+    padding: 1.5rem;
+}
+
+.card__text {
+    margin-bottom: 1.5rem;
+    color: #6c757d;
+    line-height: 1.7;
+}
+
+/* Button Block */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+}
+
+/* Button Modifiers */
+.button--primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+}
+
+.button--primary:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.button--secondary {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    color: white;
+}
+
+.button--secondary:hover {
+    background: linear-gradient(135deg, #495057, #343a40);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+/* Button Group Block */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.button-group__item {
+    /* Individual button styling within group */
+}
+
+/* Grid Section Block */
+.grid-section {
+    margin-bottom: 3rem;
+}
+
+.grid-section__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.grid-section__item {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    color: #495057;
+    transition: all 0.3s ease;
+}
+
+.grid-section__item:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Footer Block */
+.footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer__text {
+    margin: 0;
+}
+
+/* Responsive Modifiers */
+@media (max-width: 768px) {
+    .header__title--mobile {
+        font-size: 2rem;
+    }
+    
+    .header__navigation--mobile {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .card-section--mobile {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-group--mobile {
+        flex-direction: column;
+    }
+    
+    .button--mobile {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}

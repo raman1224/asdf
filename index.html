@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Comparison: Vanilla vs Different Approaches</title>
+    <link rel="stylesheet" href="vanilla-css.css">
+    <link rel="stylesheet" href="utility-first.css">
 </head>
 <body>
-    <p>asdf</p>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">CSS Comparison Demo</h1>
+            <nav class="navigation">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="card-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Vanilla CSS Approach</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">This section uses traditional vanilla CSS with semantic class names and structured stylesheets.</p>
+                        <button class="btn btn-primary">Primary Button</button>
+                        <button class="btn btn-secondary">Secondary Button</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Alternative Approaches</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Compare with utility-first, BEM methodology, and CSS-in-JS approaches.</p>
+                        <div class="button-group">
+                            <button class="btn-util-primary">Utility-First</button>
+                            <button class="btn-util-secondary">Utility-First Alt</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid-section">
+                <div class="grid-container">
+                    <div class="grid-item">Item 1</div>
+                    <div class="grid-item">Item 2</div>
+                    <div class="grid-item">Item 3</div>
+                    <div class="grid-item">Item 4</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 CSS Comparison Demo</p>
+        </footer>
+    </div>
 </body>
 </html>
